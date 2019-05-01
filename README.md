@@ -4,7 +4,8 @@
 
 The goal of this challenge is to get experience doing quality control for labeled data.
 
-The original source of this data is a UPenn class: http://crowdsourcing-class.org/.
+The original source of this data and the project is a UPenn class: http://crowdsourcing-class.org/.
+Highly suggest checking it out to learn more about crowdsourcing / data labeling!
 
 ## Getting started
 
@@ -35,6 +36,46 @@ pip install -r requirements.txt
 
 This data is from a real mTurk project for *Adjectives and Attribute Matching*.
 
-Take a close look at the instructions that were provided to the labelers:
+First, take a close look at the instructions that were provided to the labelers:
 
 ![Instructions pt1](https://raw.githubusercontent.com/crowdsourcing-class/crowdsourcing-class.github.io/master/assignments/hw7/ins_screenshot.png)
+
+![Instructions pt2](https://raw.githubusercontent.com/crowdsourcing-class/crowdsourcing-class.github.io/master/assignments/hw7/hit_screenshot.png)
+
+Now inspect the raw data file, `raw_data.csv`. 
+
+A few things to note: 
+
+* You can get a unique id for the worker in column `WorkerId`
+* Lifetime approval rate: percentage of times requester has approved work of this mTurker across all tasks
+* `Input.attr_id` is the unique id for the attribute, `Input.adj_*` are the adjectives and `Answer.adj_*` the labeler's answers
+* If the labeler answered 'No' or 'not an adj', these are both listed as no in the dataset
+
+
+### 3. Run the starter code
+
+Open `summarize_labels.py` and take a look.
+
+Then try to run it: 
+
+```
+python summarize_labels.py
+```
+
+And inspect the answers it produces by opening `summarized_data.csv`.
+
+How good are the labels? Run 
+
+```
+python evaluate_results.py
+```
+
+### 4. Can you do better?
+
+Write your own label summarization algorithm in `summarize_labels.py`. 
+
+<details>
+  <summary>Test</summary>
+  <br>
+  asdf
+</details>
