@@ -75,7 +75,26 @@ python evaluate_results.py
 Write your own label summarization algorithm in `summarize_labels.py`. 
 
 <details>
-  <summary>Test</summary>
+  <summary>Want a hint?</summary>
   <br>
-  asdf
+  Think about how you can assess whether certain labelers are reliable or not. 
+
+  You could also think about whether 50% is the right threshold to use.
 </details>
+
+<details>
+  <summary>Want another hint?</summary>
+  <br>
+  Columns Input.adj_11 through Input.adj_16 have known ground truth. 11-15 are True
+  and 16 is False. How can you use this to evalute the labelers?
+</details>
+
+<details>
+  <summary>One last hint!</summary>
+  <br>
+  Come up with a "reliability score" for the labelers by assessing their performance
+  on columns 11-16. Predict the label based on the weighted average of scores, 
+  not the simple average. You can also consider dropping unreliable labelers.
+</details>
+
+
