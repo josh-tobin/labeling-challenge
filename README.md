@@ -11,6 +11,8 @@ Highly suggest checking it out to learn more about crowdsourcing / data labeling
 
 ### 0. Set up a pyenv virtual environment (recommended)
 
+Note: it is not necessary to use pyenv, but you *do need python 3.6*. 
+
 Follow this tutorial to install pyenv and learn about it:
 
 ```
